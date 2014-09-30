@@ -26,18 +26,6 @@ var app = angular.module('apollo',[ ]);
             });
         };
         $scope.getTopTracks();
-    }])
-
-
-    app.controller('SimilarController', ['$scope', '$http', function($scope, $http){
-        var url = 'http://ws.audioscrobbler.com/2.0/';
-        config = {
-            params: {
-                api_key: 'c56d341e419af937337f42e83bf0daab',
-                format: 'json',
-                callback: 'JSON_CALLBACK'
-            }
-        };
 
         $scope.getSimilar = function(){
             var artist = $scope.artist;
@@ -61,5 +49,4 @@ var app = angular.module('apollo',[ ]);
             });
         };
     }])
-
 })()
